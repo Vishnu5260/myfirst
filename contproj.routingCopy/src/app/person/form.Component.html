@@ -1,0 +1,99 @@
+<div class='center'></div><div class="col-lg-12 bg-light text-center">
+    <form #detform="ngForm" (ngSubmit)="saveData(detform)">
+        <div class="row">
+        <div class="col-4">
+            <!-- name -->
+
+    <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>firstname</mat-label>
+        <input matInput  placeholder="firstname" name="firstnamevalid" #firstnamevalid="ngModel" ngModel required>
+        <mat-error *ngIf="firstnamevalid.invalid " >
+        name is <b>required</b>
+        </mat-error>
+    </mat-form-field>
+</div>
+<!-- mname -->
+<div class="col-4">
+<mat-form-field class="example-full-width" appearance="fill">
+<mat-label>Middletname</mat-label>
+<input matInput  placeholder="middlename" name="middlenamevalid"  ngModel >
+</mat-form-field>
+</div>
+
+<!-- lastname -->
+<div class="col-4">
+    <mat-form-field class="example-full-width" appearance="fill">
+    <mat-label>Lastname</mat-label>
+    <input matInput  placeholder="Lastname" name="Lastname" #lastnamevalid="ngModel" ngModel required >
+    <mat-error *ngIf="lastnamevalid.invalid">
+      lastname is <b>required</b>
+    </mat-error>
+    </mat-form-field>
+    </div>
+<!-- department -->
+    <div class="col-4 ">
+        <!-- value IT, HR, Payroll, Networking, Admin -->
+        <mat-form-field>
+         <mat-label >Department</mat-label>
+         <mat-select ngModel name='department'>
+         <mat-option  value="It" >It</mat-option>
+         <mat-option value="Hr">Hr</mat-option>
+         <mat-option value="payroll">Payroll</mat-option>
+         <mat-option value="networking">Networking</mat-option>
+         <mat-option value="admin">Admin</mat-option>
+     </mat-select>
+        </mat-form-field>
+     </div>
+     
+    
+
+<!-- dob -->
+<div class="col-4">
+    <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>DOB</mat-label>
+        <input matInput type="date" name="dob" #dobvalid="ngModel"ngModel required>
+        <mat-error>
+            plz<b>dob</b>
+        </mat-error>
+    </mat-form-field>    
+</div>
+
+
+<!-- gender -->
+<div class="col-4 ">
+   <mat-form-field>
+    <mat-label >Gender</mat-label>
+    <mat-select ngModel name='gender'>
+    <mat-option  value="male" >male</mat-option>
+    <mat-option value="female">female</mat-option>
+</mat-select>
+   </mat-form-field>
+</div>
+<!-- address -->
+<div class="col-4">
+    <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Address</mat-label>
+        <input matInput type="text" name="add1" ngModel required>
+        <mat-error >
+            enter <b>add</b>
+        </mat-error>
+    </mat-form-field>    
+</div>
+<!-- pincode -->
+<div class="col-4">
+    <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>pincode</mat-label>
+        <input matInput type="text" maxlength="6" name="pincode" #pincodevalid="ngModel"ngModel required>
+        <mat-error *ngIf="pincodevalid.invalid">
+            plz <b>valid</b>
+
+        </mat-error>
+    </mat-form-field>    
+</div>
+
+
+
+</div><div class=col-4>
+    <button type="submit" class="btn btn-success" >submit</button>
+</div></form></div>
+

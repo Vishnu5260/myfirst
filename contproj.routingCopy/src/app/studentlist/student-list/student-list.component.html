@@ -1,0 +1,36 @@
+<table class="table table-striped"padding="2px" border="2">
+    <thead>
+        <th>Name</th>
+        <th>Gender</th>
+        <th>RollNo</th>
+        <th>class</th>
+         <th>Maths</th>  
+      <th>English</th>
+      <th >Science</th>
+      <th>hindi</th>
+      <th>drawing</th>
+      <th>totalmarks</th>
+    </thead>
+    <tbody *ngFor="let st of student">
+    
+    <tr>
+    <td>{{st.fname+" "+st.mname+" "+st.lname}}</td>
+    <td>{{st.gender}}</td>
+    <td>{{st.Rollno}}</td>
+    <td>{{st.class}}</td>
+    <!-- <td Highlight [backgroundcolor]="(st.maths)>35?'white':'red' ">{{st.maths}}</td>
+    <td Highlight [backgroundcolor]="(st.English)>35?'white':'red' ">{{st.English}}</td>
+    <td Highlight [backgroundcolor]="(st.hindi)>35?'white':'red'" >{{st.hindi}}</td>    
+    <td Highlight [backgroundcolor]="(st.science)>35?'white':'red' ">{{st.science}}</td>
+    <td Highlight [backgroundcolor]="(st.socialscience)>35?'white':'red' ">{{st.drawing}}</td>
+    <td Highlight [backgroundcolor]="(st.maths+st.English+st.hindi+st.science+st.drawing)>450?'white':'green'|| (st.maths+st.English+st.hindi+st.science+st.drawing)<250?'white':'blue'" >{{st.maths+st.English+st.hindi+st.science+st.drawing}}</td> -->
+    <td  >{{st.maths}}</td>
+    <td   >{{st.English}}</td>
+    <td  >{{st.hindi}}</td>    
+    <td   >{{st.science}}</td>
+    <td  >{{st.drawing}}</td>
+    <td >{{st.maths+st.English+st.hindi+st.science+st.drawing}}</td>
+ 
+    </table>
+
+    
