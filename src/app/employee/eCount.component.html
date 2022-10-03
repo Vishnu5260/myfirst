@@ -1,0 +1,9 @@
+<p>SHOW DATA</p>
+<input type="radio" [(ngModel)]="selectedRBvalue" (change)="onRadioButtonSelectionChange()" name="empopt" value="all">{{'ALL('+allCount+')'}}
+<input type="radio" [(ngModel)]="selectedRBvalue" (change)="onRadioButtonSelectionChange()" name="empopt" value="male">Male{{'ALL('+maleCount+')'}}
+<input type="radio" [(ngModel)]="selectedRBvalue" (change)="onRadioButtonSelectionChange()" name="empopt" value="female">Female{{'ALL('+femaleCount+')'}}
+
+<!-- <select name="gender">
+    <option value="male" selected>Male</option>
+    <option value="female">female</option>
+</select> -->

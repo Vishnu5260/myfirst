@@ -1,0 +1,24 @@
+<table class="table table-active" border="2">
+<thead>
+    <th>name</th>
+    <th>domain</th>
+</thead>
+
+<tbody>
+    <ng-container *ngFor="let dept of dep"> 
+<tr *ngIf="sel=='all' ||dept.domain==sel">
+    <td>{{dept.name}}</td>
+    <td>{{dept.domain}}</td>
+</tr>
+    </ng-container>
+<tr *ngIf ="dep.length==0">
+    <td >no depa found</td>
+</tr>
+</tbody>
+</table>
+<depCount [allCount]=getall()
+[allM]= getM()
+[allP]=getPro()
+[allW]=getWeb()
+(selectSelectionChange)="onselectButtonSelectionChange($event)"
+></depCount>

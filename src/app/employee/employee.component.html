@@ -1,0 +1,41 @@
+
+<input class="btn btn-danger" [(ngModel)]="value"  on-click="show()">
+<br>
+
+<div *ngIf="empflag"  class="container" class="inline-grid">
+    <div class="row">
+        <div class="col-6"*ngIf="empflag" >
+            <table width="350"class=" table table-active" border="5px"style="border-width:2px">
+                <thead>
+                    <th>name</th>
+                    <th>sal</th>    
+                    <th>loc</th>
+                    <th>gender</th>
+                </thead>
+                
+                <tbody> <ng-container *ngFor='let emp of empp'>
+                        <tr  *ngIf="selectedRbValue=='all' || emp.gender==selectedRbValue" >
+                            <td>{{emp.name}}</td>
+                            <td>{{emp.sal | currency:'INR':'symbol'}}</td>
+                            <td>{{emp.loc}}</td>
+                            <td>{{emp.gender }}</td>
+                        </tr>
+                    </ng-container>
+                    <tr *ngIf="empp.length==0">
+                        <td colspan="5">no employee found</td>
+                    </tr>
+                 </tbody>
+            </table>
+            </div>
+        
+                <ecount
+                [allCount]=getallEmpCount()
+                [maleCount]=getmaleEmpCount()
+                [femaleCount]=getfemaleEmpCount()
+                (rbselectionChange)="gettingtheSelectedRadioButtonvalue($event)">
+            </ecount>
+        </div>
+            
+    </div>
+
+
